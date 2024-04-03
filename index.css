@@ -1,0 +1,598 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Roboto', cursive;
+}
+.container {
+  width: 100%;
+  height: 80vh;
+  background-color: #ffffff;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+body::-webkit-scrollbar{
+  display: none;
+}
+
+/* Nvabar */
+nav .websitename{
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #fff;
+}
+nav .websitename h1{
+  font-weight: bolder;
+  padding-top: 1.5%;
+  padding-left: 5%;
+  padding-bottom: 1.5%;
+  font-size: 36px;
+}
+nav .websitename .progress-container{
+  width: 100%;
+  height: 8px;
+  background: #ccc;
+}
+nav .websitename .progress-bar{
+  height: 8px;
+  background: #04AA6D;
+  width: 0%;
+}
+
+/* Main */
+main {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  color: #fff;
+  padding-left: 3%;
+  background-color: #000;
+  padding-top: 8%;
+}
+section h1 {
+  font-size: 38px;
+  font-weight: 400;
+  color: #fff;
+  font-family: bold;
+  letter-spacing: 2px;
+  text-shadow: 1px 1px 1px #000;
+}
+section h3 {
+  margin: 14px 0px 18px 0;
+  font-size: 30px;
+  font-weight: 500;
+  text-shadow: 1px 1px 2px #000;
+}
+section p {
+  font-size: 20px;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  margin-bottom: 45px;
+}
+section a {
+  padding: 9px 30px;
+  border-radius: 4px;
+  outline: none;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  margin-right: 14px;
+}
+section .btn1 {
+  background-color: #fff;
+  color: black;
+  justify-content: center;
+}
+section .btn1:hover {
+  background-color: #000;
+  color: #fff;
+  transition: all 0.3s linear;
+}
+section .btn2 {
+  background-color: #00fc13;
+  color: black;
+  justify-content: center;
+}
+section .btn2:hover {
+  background-color: #b200fc;
+  color: #fff;
+  transition: all 0.3s linear;
+}
+.nameslideshow:after {
+  color: #00fc13;
+  animation: changename 7s infinite linear;
+  content: '';
+}
+@keyframes changename{
+  0% { content: "Thomas is the father of cybersecurity"}
+  25% { content: "Human error is the cause of 95% of data breaches"}
+  50% { content: "Cyber attacks happen every 39 seconds"}
+  100% { content: "75% of cyber attacks start with an email"}
+}
+
+/* Website Mission */
+.websitemission{
+  margin: 150px auto;
+  width: 70%;
+}
+img{
+  max-width: 320px;
+  float: left;
+}
+.Text{
+  color: #000;
+  padding-top: 5%;
+}
+.Text h2{
+  font-size: 42px;
+}
+.Text p{
+  font-size: 16px;
+  text-align: justify;
+}
+
+/* Our Services */
+.service {
+  background-color: rgb(255, 255, 255);
+  padding: 30px 0;
+  text-align: center;
+  letter-spacing: 1px;
+  margin: 30px 0px;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.service span{
+  font-size: 1.8rem;
+  color: #252525;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.service h1 {
+  font-size: 2.2rem;
+  font-weight: 500;
+  background-color: black;
+  color: #fff;
+  padding: 10px 20px;
+}
+.our-service {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 45px;
+  margin-top: 20px;
+}
+.box {
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(172, 170, 170, 0.5);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 25rem;
+  height: 16rem;
+  margin-top: 10px;
+}
+.box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(38, 8, 146, 0.5);
+}
+.name {
+  padding-top: 5%;
+  font-size: 2rem;
+  margin: 10px 0;
+  font-size: 22px;
+}
+.role {
+  padding-top: 8%;
+  padding-left: 7%;
+  padding-right: 7%;
+  padding-bottom:  8%;
+  font-size: 16px;
+  color: #2d2adf;
+  margin: 5px 0;
+  font-weight: normal;
+  text-align: justify;
+}
+section .btn4 {
+  background-color: transparent;
+  padding-top: 200%;
+  padding-bottom: 100%;
+  padding-left: 100%;
+  padding-right: 100%;
+}
+
+/* Our Course */
+.team {
+  background-color: rgb(255, 255, 255);
+  padding: 30px 0;
+  text-align: center;
+  letter-spacing: 1px;
+  margin: 30px 0px;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.team span{
+  font-size: 1.8rem;
+  color: #252525;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.team h1 {
+  font-size: 2.2rem;
+  font-weight: 500;
+  background-color: black;
+  color: #fff;
+  padding: 10px 20px;
+}
+.team-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+}
+.card {
+  background-color: rgb(255, 255, 255);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(172, 170, 170, 0.5);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 20rem;
+  height: 28rem;
+  margin-top: 10px;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(38, 8, 146, 0.5);
+}
+.card-img {
+  width: 22rem;
+  height: 35%;
+  object-fit: fill;
+}
+.card-img img {
+  width: 100%;
+  height: 130%;
+  object-fit: fill;
+  justify-content: center;
+}
+.card-name {
+  padding-top: 65px;
+  font-family: Georgia, serif;
+  font-size: 2rem;
+  margin: 10px 0;
+}
+.card-role {
+  padding-top: 6%;
+  padding-left: 7%;
+  padding-right: 7%;
+  padding-bottom:  8%;
+  font-size: 16px;
+  color: #2d2adf;
+  margin: 5px 0;
+  font-weight: normal;
+}
+section .btn3 {
+  background-color: transparent;
+  padding-top: 200%;
+  padding-bottom: 100%;
+  padding-left: 100%;
+  padding-right: 100%;
+}
+
+/* Review */
+a{
+  text-decoration: none;
+}
+#reviews{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.review-heading{
+  letter-spacing: 1px;
+  margin: 30px 0px;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.review-heading h1{
+  font-size: 2.2rem;
+  font-weight: 500;
+  background-color: transparent;
+  color: #000f;
+  padding: 10px 20px;
+}
+.review-heading span{
+  font-size: 1.3rem;
+  color: #252525;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.review-box-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.review-box{
+  width: 500px;
+  box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+  background-color: #ffffff;
+  padding: 30px;
+  margin: 15px;
+  cursor: pointer;
+  transform: all .4s ease-in-out;
+}
+.profile-img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+.profile-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.profile{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.name-user{
+  display: flex;
+  flex-direction: column;
+}
+.name-user strong{
+  color: #3d3d3d;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+.name-user span{
+  color: #979797;
+  font-size: 0.8rem;
+}
+.reviews{
+  color: #f9d71c;
+}
+.box-top{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.student-comment p{
+  font-size: 0.9rem;
+  width: 200px;
+  color: #4b4b4b;
+  margin: 5px 0px;
+}
+.review-box:hover{
+  transform: translateY(-10px);
+  transition: all ease 0.3s;
+}
+@media(max-width:1060px){
+  .review-box{
+    width: 45%;
+    padding: 10px;
+  }
+}
+@media(max-width:790px){
+  .review-box{
+    width: 100%;
+  }
+  .testimonial-heading h1{
+    font-size: 1.4rem;
+  }
+}
+@media(max-width:340px){
+  .box-top{
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  .reviews{
+    margin-top: 10px;
+  }
+}
+
+/* User Rating */
+#user-rating {
+  font-family: Arial;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 20px;
+  padding-top: 5%;
+}
+.heading {
+  font-size: 25px;
+  margin-right: 25px;
+}
+.fa {
+  font-size: 25px;
+}
+.rating h6{
+  color: #000;
+  padding-top: 1%;
+  font-size: 18px;
+  padding-bottom: 1%;
+}
+.side {
+  float: left;
+  width: 15%;
+  margin-top:10px;
+}
+.middle {
+  margin-top:10px;
+  float: left;
+  width: 70%;
+}
+.right {
+  text-align: right;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.bar-container {
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+  color: white;
+}
+.bar-5 {width: 60%; height: 18px; background-color: #04AA6D;}
+.bar-4 {width: 30%; height: 18px; background-color: #2196F3;}
+.bar-3 {width: 10%; height: 18px; background-color: #00bcd4;}
+.bar-2 {width: 4%; height: 18px; background-color: #ff9800;}
+.bar-1 {width: 15%; height: 18px; background-color: #f44336;}
+@media (max-width: 400px) {
+  .side, .middle {
+    width: 100%;
+  }
+  .right {
+    display: none;
+  }
+}
+
+/* About */
+.about{
+  font-family: 'Roboto';
+  padding-top: 5%;
+  letter-spacing: 1px;
+  margin: 30px 0px;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.about h1{
+  font-size: 2.2rem;
+  font-weight: 500;
+  background-color: black;
+  color: #fff;
+  padding: 10px 20px;
+}
+.about h2{
+  padding-left: 3%;
+  padding-top: 2%;
+  padding-right: 3%;
+  font-size: 16px;
+  padding-bottom: 2.5%;
+  text-align: justify;
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+  color: white;
+}
+footer .contact{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 150px;
+  margin-top: 20px;
+}
+footer .first{
+  justify-content: left;
+  padding-left: 3%;
+  padding-top: 5%;
+}
+footer .first p{
+  padding-top: 0.05%;
+}
+footer .first h2{
+  padding-top: 10%;
+  font-size: 16px;
+}
+footer .first .socialmediaicon{
+  padding-top: 5%;
+}
+footer .second .address{
+  font-size: 20px;
+  padding-top: 28%;
+  padding-bottom: 8%;
+}
+footer .second .mail{
+  padding-bottom: 5%;
+  font-size: 20px;
+  padding-bottom: 20%;
+}
+footer .patent{
+  width: 100%;
+  height: 7vh;
+  background-color: red;
+  color: white;
+  text-align: center;
+  padding-top: 15px;
+}
+.inside-contact{
+  padding-top: 2.5%;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    margin-top: 1rem;
+    justify-content: space-between;
+  }
+ 
+  .nav-links li {
+    margin-right: 0;
+  }
+ 
+  .about h1 {
+    font-size: 2rem;
+  }
+ 
+  .about p {
+    font-size: 0.9rem;
+  }
+ 
+  .about-info {
+    flex-direction: column;
+    text-align: center;
+  }
+ 
+  .about-img {
+    width: 60%;
+    height: 60%;
+    margin-bottom: 1rem;
+  }
+ 
+  .about-info p {
+    margin: 1rem 2rem;
+  }
+ 
+  .about-info button {
+    margin: 1rem 2rem;
+    width: 10rem;
+  }
+ 
+  .team {
+    margin: 0 1rem;
+  }
+}
+
