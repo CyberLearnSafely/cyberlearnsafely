@@ -1,6 +1,8 @@
 ### Welcome Cyber Learn Safely 📚🔐🛡👋
 
 
+"Tempare Cloose" 🚧 _ An upcoming website, currently under development 🔧, with a modern design 🖥️ and promising innovative services/products 💡. Opening soon! 🔜
+
 
 <!--
 **CyberLearnSafely/cyberlearnsafely** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
