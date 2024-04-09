@@ -1,8 +1,6 @@
 ### Welcome Cyber Learn Safely 📚🔐🛡👋
 
-      😔
-
-The website is currently unavailable due to development and the addition of a modern design. It will be available soon.
+😔 The website is currently unavailable due to development and the addition of a modern design. It will be available soon.
 
 
 <!--
