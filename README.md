@@ -1,7 +1,7 @@
 ### Welcome Cyber Learn Safely 📚🔐🛡👋
 
-
-"Tempare Cloose" 🚧 _ An upcoming website, currently under development 🔧, with a modern design 🖥️ and promising innovative services/products 💡. Opening soon! 🔜
+################################ 😔
+The website is currently unavailable due to development and the addition of a modern design. It will be available soon.
 
 
 <!--
