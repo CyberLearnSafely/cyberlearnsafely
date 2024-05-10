@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberLearnSafely | C program</title> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <!---------------------------------------------------Font Awesome Icon Library-------------------------------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!----------------------------------------------------------Icon---------------------------------------------------->
+    <link rel="icon" href="icon_path" type="image/icon type">
+    <link rel="icon" href="Cyber Learn Safely color.png"type="image/x-icon">
+  </head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+    :root{
+      --black: #272D3B;
+      --red: #ED176F;
+      --coral: #F7817F;
+      --gradient: linear-gradient(90deg, var(--red), var(--coral));
+    }
+    ::-webkit-scrollbar {
+      width: 15px;
+    }
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px rgb(255, 255, 255); 
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--red); 
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #cc0606;
+    }
+    *{
+      font-family: 'Nunito', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      outline: none;
+      border: none;
+      text-transform: capitalize;
+      transition: all .2s linear;
+    }
+    *::selection{
+      background: var(--red);
+      color: #fff;
+    }
+    html{
+      font-size: 62.5%;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      scroll-padding-top: 4rem;
+    }
+    .heading{
+      text-align: center;
+      color: transparent;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      font-size: 3rem;
+      text-transform: uppercase;
+      padding: 1rem;
+    }
+    /* Header Section starts */
+    header{
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: var(--black);
+      z-index: 1000;
+      padding: 2rem 9%;
+      border-bottom: .1rem solid #fff3;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header .logo{
+      font-weight: bolder;
+      color: #fff;
+      font-size: 2.5rem;
+    }
+    /* Home Section starts */
+    section{
+      padding: 3%;
+    }
+    .home{
+      justify-content: center;
+      display: flex;
+      flex-wrap: wrap;
+      padding-top: 10%;
+      padding-bottom: 5%;
+      background: var(--black);
+    }
+    .home .content{
+      padding-top: 5rem;
+      max-width: 70rem;
+      margin: 0 auto;
+    }
+    .home .content h3{
+      font-size: 4rem;
+      color: #fff;
+    }
+    .home .content p{
+      font-size: 1.5rem;
+      color: #eee;
+      padding-top: 5%;
+      padding-bottom: 5%;
+      text-align: justify;
+    }
+    .home .home-img{
+      padding-top: 5%;
+    }
+    .home .home-img img {
+      width: 100%;
+      height: 100%;
+    }
+    .btn{
+      display: inline-block;
+      padding: .7rem 3rem;
+      margin-top: 1rem;
+      border-radius: 5rem;
+      background: var(--gradient);
+      color: #fff;
+      cursor: pointer;
+      font-size: 1.7rem;
+    }
+    .btn:hover{
+      transform: scale(1.1);
+    }
+    .card-info{
+      padding-top: 2%;
+    }
+    .card {
+      background-color: rgb(255, 255, 255);
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(172, 170, 170, 0.5);
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+      width: 40rem;
+      height: 40rem;
+      margin-top: 10px;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 12px rgba(38, 8, 146, 0.5);
+    }
+    .card-img {
+      width: 100%;
+      height: 50%;
+      object-fit: fill;
+    }
+    .card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+    }
+    .card-name{
+      font-size: 2.5rem;
+      margin: 10px 0;
+      text-align: center;
+    }
+    .card-text{
+      font-size: 2rem;
+      text-align: center;
+    }
+    h4{
+      font-size: 1.9rem;
+      text-align: center;
+      font-weight: bold;
+      padding-top: 3%;
+      padding-bottom: 1.5%;
+    }
+    h5{
+      font-size: 1.7rem;
+      text-align: center;
+      font-weight: bold;
+    }
+    span{
+      color: #2d2adf;
+    }
+    .card-role {
+      font-size: 16px;
+      color: #2d2adf;
+      margin: 5px 0;
+      font-weight: normal;
+    }
+    /* Course-includes */
+    .Course-includes .includes .one{
+      justify-content: center;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 50px;
+      margin-top: 4%;
+    }
+    .Course-includes .includes .one p{
+      font-size: 2.5rem;
+    }
+    /* course-content */
+    .course-content .subject{
+      padding-top: 2%;
+      padding-left: 2.5%;
+      justify-content: center;
+    }
+    .course-content .subject .subject-info{
+      padding-top: 2%;
+      padding-left: 7%;
+      background-color: rgb(255, 255, 255);
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(172, 170, 170, 0.5);
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+      width: 120rem;
+      height: 6rem;
+      margin-top: 10px;
+    }
+    .course-content .subject h2{
+      font-size: 2rem;
+    }
+    /* Course Description */
+    .description p{
+      font-size: 2rem;
+      text-align: justify;
+    }
+    /* requirements */
+    .requirements .requirement{
+      padding-top: 2%;
+      padding-left: 7%;
+    }
+    .requirements .text{
+      font-size: 2rem;
+    }
+    /* Footer section start */
+    .footer{
+      text-align: center;
+      background: var(--black);
+    }
+    .footer .share a{
+      height: 4.5rem;
+      width: 4.5rem;
+      line-height: 4.5rem;
+      background: #eee;
+      color: var(--black);
+      border-radius: 50%;
+      font-size: 2rem;
+      margin: .3rem;
+    }
+    .footer .share a:hover{
+      color: #fff;
+      background: var(--gradient);
+    }
+    .footer .credit{
+      color: #eee;
+      padding: 1.5rem 1rem;
+      font-weight: normal;
+      font-size: 2rem;
+    }
+    .footer .credit span{
+      color: var(--red);
+    }
+    /* medis queries */
+    @media (max-width:991px){
+      html{
+        font-size: 55%;
+      }
+      header{
+        padding: 2rem 4%;
+      }
+      section{
+        padding: 3rem 4%;
+      }
+    }
+    @media (max-width:768px){
+      .fa-times{
+        transform: rotate(180deg);
+      }
+      .home .content h3{
+        font-size: 4rem;
+      }
+      .home .content p{
+        font-size: 1.5rem;
+      }
+      .about .row .content{
+        text-align: center;
+      }
+      .about .row .content .buttons a{
+        width: 100%;
+      }
+      .about .row .content .buttons a:last-child{
+        margin: 1rem 0;
+      }
+      .course-content .subject .subject-info{
+        width: 70rem;
+      }
+    }
+    @media (max-width:400px){
+      html{
+        font-size: 50%;
+      }
+      .heading{
+        font-size: 2.5rem;
+      }
+      .Course-includes .includes .one p{
+        font-size: 2.5rem;
+      }
+      .course-content .subject .subject-info{
+        width: 43rem;
+      }
+      .description p{
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+  <body>
+  <!------------------------------------------------------- Navigation Bar --------------------------------------->
+    <header>
+      <a href="index.html" class="logo">Cyber Learn Safely</a>
+    </header>
+  <!-------------------------------------------------------Home Section Starts--------------------------------------->
+      <section class="home" id="home">
+        <div class="content">
+          <h3>Learn Bash Scripting</h3>
+          <p>Embark on a journey to master the fundamental programming language that powers countless software systems and applications worldwide. Our Comprehensive C++ Programming Advisement Course offers a structured and immersive learning experience tailored for individuals at all skill levels, from beginners to seasoned developers.</p>
+          <a href="https://forms.gle/uUqnmPibq97qyWYn7" class="btn"> Join Now.. </a>
+        </div>
+        <div class="card">
+          <div class="card-img">   
+            <img src="BASH.JPG" alt="Course 1">
+          </div>
+          <div class="card-info">   
+            <h2 class="card-name">Bash Scripting</h2>
+            <p class="card-text"><span>₹</span> 600 / Month</p>
+            <h4>Wekly 2 Class</h4>
+            <h5><span>Saturday: </span>10:00 AM - 12:00 AM</h5>
+            <h5><span>Saturday: </span>10:00 AM - 12:00 AM</h5>
+          </div>
+        </div>
+      </section>
+  <!-------------------------------------------------------Course Includes--------------------------------------->
+    <section class="Course-includes" id="Course-ncludes">
+      <h1 class="heading">This course includes</h1>
+      <div class="includes">
+        <div class="one">
+          <p>Hand written Notes</p>
+          <p>Live Practical Class</p>
+          <p>making Project</p>
+          <p>Career Support</p>
+          <p>Internship Opurchinite</p>
+        </div>
+      </div>
+    </section>
+  <!-------------------------------------------------------Course Content--------------------------------------->
+    <section class="course-content" id="course-content">
+      <div class="syllabus">
+        <h1 class="heading">Course Content</h1>
+      </div>
+      <div class="subject">
+        <div class="subject-info">
+          <h2><span>Topic 1: </span>Introduction to C Basics</h2>
+        </div>
+        <div class="subject-info">
+          <h2><span>Topic 2: </span>Keyword</h2>
+        </div>
+        <div class="subject-info">
+          <h2><span>Topic 3: </span>Data types</h2>
+        </div>
+        <div class="subject-info">
+          <h2><span>Topic 4: </span>Variables</h2>
+        </div>
+        <div class="subject-info">
+          <h2><span>Topic 5: </span>Identifier</h2>
+        </div>
+        <div class="subject-info">
+          <h2><span>Topic 6: </span>Operators</h2>
+        </div>
+        <div class="subject-info">
+          <h2><span>Topic 7: </span>Control flow statements</h2>
+        </div>
+        <div class="subject-info">
+          <h2><span>Topic 8: </span>Loops</h2>
+        </div>
+        <div class="subject-info">
+          <h2><span>Topic 9: </span>Arrays</h2>
+        </div>
+        <div class="subject-info">
+          <h2><span>Topic 10: </span>Strings</h2>
+        </div>
+        <div class="subject-info">
+          <h2><span>Topic 11: </span>Pointers</h2>
+        </div>
+        <div class="subject-info">
+          <h2><span>Topic 12: </span>Functions</h2>
+        </div>
+        <div class="subject-info">
+          <h2><span>Topic 13: </span>Structures</h2>
+        </div>
+        <div class="subject-info">
+          <h2><span>Topic 14: </span>Exam</h2>
+        </div>
+      </div>
+    </section>
+  <!--------------------------------------------------------Course Requirements--------------------------------------->
+    <section class="requirements" id="requirements">
+      <h1 class="heading">Requirements</h1>
+      <div class="requirement">
+      <div class="text">
+        <p><li>No prerequisite knowledge required</li></p>
+        <p><li>No special ($$$) software required</li></p>
+      </div>
+      </div>
+    </section>
+  <!--------------------------------------------------------Course Description---------------------------------------->
+    <section class="description" id="description">
+      <h1 class="heading">Description</h1>
+      <p>In the C++ program course taught by instructor Sayan Aich, students will learn about the fundamental concepts and structure of C++ programming, including the six basic sections of a C++ program: Documentation, Preprocessor, Definition, Global Declaration, Main() Function, and Sub Programs. Through hands-on exercises and real-world examples, students will gain a deep understanding of how to write efficient and effective C++ programs, including the use of header files, constants, global variables, and user-defined functions. With Sayan Aich's guidance, students will develop the skills necessary to create well-structured and maintainable C++ programs, and will be prepared to apply these skills to a variety of programming scenarios.</p>
+    </section>
+  <!-------------------------------------------------------Footer Section Start--------------------------------------->
+    <section class="footer">
+      <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="https://www.youtube.com/@Cyber_Learn_Safely" class="fab fa-youtube"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+        <a href="https://chat.whatsapp.com/HTxBgUoV1jSApEDLsA1wId " class="fab fa-whatsapp"></a>
+      </div>
+      <h1 class="credit"><span>cyberlearnsafely@gmail.com</span></h1>
+      <h1 class="credit">Copyright 2024 @ <span>Cyber Learn Safely</span> All Rights Reserved!</h1>
+    </section>
+
+  </body>
+</html>

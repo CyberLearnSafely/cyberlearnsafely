@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CyberLearnSafely | home</title> 
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <!---------------------------------------------------Font Awesome Icon Library-------------------------------------->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!----------------------------------------------------------Icon---------------------------------------------------->
+        <link rel="icon" href="icon_path" type="image/icon type">
+        <link rel="icon" href="Cyber Learn Safely color.png"type="image/x-icon">
+    </head>
+    <!--------------------------------------------------------Style----------------------------------------------------->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+        :root{
+            --black: #272D3B;
+            --red: #ED176F;
+            --coral: #F7817F;
+            --gradient: linear-gradient(90deg, var(--red), var(--coral));
+        }
+        ::-webkit-scrollbar {
+            width: 15px;
+        }
+        ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px rgb(255, 255, 255); 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--red); 
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #cc0606;
+        }
+        *{
+            font-family: 'Nunito', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            outline: none;
+            border: none;
+            text-transform: capitalize;
+            transition: all .2s linear;
+        }
+        *::selection{
+            background: var(--red);
+            color: #fff;
+        }
+        html{
+            font-size: 62.5%;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            scroll-padding-top: 4rem;
+        }
+        .heading{
+            text-align: center;
+            color: transparent;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            font-size: 5rem;
+            text-transform: uppercase;
+            padding: 1rem;
+        }
+        /* Header Section starts */
+        header{
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--black);
+            z-index: 1000;
+            padding: 2rem 9%;
+            border-bottom: .1rem solid #fff3;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        header .logo{
+            font-weight: bolder;
+            color: #fff;
+            font-size: 2.5rem;
+        }
+        header .navbar a{
+            font-size: 2rem;
+            color: #fff;
+            margin-left: 2.5rem;
+        }
+        header .navbar a:hover{
+            color: var(--red);
+        }
+        #menu-bar{
+            font-size: 3rem;
+            color: #fff;
+            cursor: pointer;
+            display: none;
+        }
+        /* Home Section starts */
+        section{
+            padding: 3rem 9%;
+        }
+        .btn{
+            display: inline-block;
+            padding: .7rem 3rem;
+            margin-top: 1rem;
+            border-radius: 5rem;
+            background: var(--gradient);
+            color: #fff;
+            cursor: pointer;
+            font-size: 1.7rem;
+        }
+        .btn:hover{
+            transform: scale(1.1);
+        }
+        .home{
+            background: url(home-background.JPG) no-repeat;
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+        .home .content{
+            padding-top: 5rem;
+            max-width: 70rem;
+            margin: 0 auto;
+        }
+        .home .content h3{
+            font-size: 6.5rem;
+            color: #fff;
+        }
+        .home .content p{
+            font-size: 1.7rem;
+            color: #eee;
+            padding: 1rem 0;
+        }
+        .home .swiper-container {
+            width: 100%;
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+        .home .swiper-slide {
+            width: 30rem;
+            height: 50rem;
+        }
+        .home .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        /* Features Section Start */
+        .features .box-container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .features .box-container .box{
+            margin: 1rem;
+            border-radius: .5rem;
+            text-align: center;
+            background: rgbe(237, 23, 111, .05);
+            padding: 1rem;
+            flex: 1 1 30rem;
+        }
+        .features .box-container .box i{
+            color: var(--red);
+            font-size: 5rem;
+            padding: 1rem;
+        }
+        .features .box-container .box h3{
+            color: var(--black);
+            font-size: 2.4rem;
+        }
+        .features .box-container .box p{
+            color: #666;
+            font-size: 1.5rem;
+            padding: 1rem;
+        }
+        .features .box-container .box:hover{
+            background: var(--gradient);
+        }
+        .features .box-container .box:hover > *{
+            color: #fff;
+        }
+        /* About Section Starts */
+        .about p{
+            font-size: 1.7rem;
+            text-align: justify;
+        }
+        .about .row{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .about .row .image{
+            flex: 1 1 40rem;
+        }
+        .about .row .image img{
+            width: 100%;
+        }
+        .about .row .content{
+            flex: 1 1 40rem;
+        }
+        .about .row .content h3{
+            color: var(--black);
+            font-size: 3.5rem;
+        }
+        .about .row .content p{
+            color: #666;
+            font-size: 1.7rem;
+            padding: 1rem 0;
+        }
+        .about .row .content .buttons{
+            padding: 2%;
+        }
+        .about .row .content .buttons a img{
+            width: 35%;
+        }
+        .about .row .content .buttons a:hover{
+            opacity: .7;
+        }
+        .about .row .content .buttons a:last-child{
+            margin-left: 2rem;
+        }
+        /* why_cyberlearnsafely */
+        .why_cyberlearnsafely {
+            background-color: rgb(255, 255, 255);
+            padding: 30px 0;
+            text-align: center;
+            letter-spacing: 1px;
+            margin: 30px 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .why_cyberlearnsafely-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+        }
+        .cards {
+            background-color: rgb(255, 255, 255);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(172, 170, 170, 0.5);
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+            width: 33rem;
+            height: 27rem;
+        }
+        .cards:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(38, 8, 146, 0.5);
+        }
+        .cards-img {
+            width: 100%;
+            height: 65%;
+            object-fit: fill;
+        }
+        .cards-img img {
+            width: 100%;
+            height: 130%;
+            object-fit: fill;
+            justify-content: center;
+        }
+        .cards-name {
+            padding-top: 50px;
+            font-family: Georgia, serif;
+            font-size: 2rem;
+            margin: 10px 0;
+        }
+        .cards-role {
+            padding-top: 6%;
+            padding-left: 7%;
+            padding-right: 7%;
+            padding-bottom: 8%;
+            font-size: 16px;
+            color: #2d2adf;
+            margin: 5px 0;
+            font-weight: normal;
+        }
+        .btn3 {
+            background-color: transparent;
+            padding-top: 200%;
+            padding-bottom: 100%;
+            padding-left: 100%;
+            padding-right: 100%;
+        }
+        /* Course Section Start */
+        .course {
+            background-color: rgb(255, 255, 255);
+            padding: 30px 0;
+            text-align: center;
+            letter-spacing: 1px;
+            margin: 30px 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .course-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 20px;
+        }
+        .card {
+            background-color: rgb(255, 255, 255);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(172, 170, 170, 0.5);
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+            width: 28rem;
+            height: 26rem;
+            margin-top: 10px;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(38, 8, 146, 0.5);
+        }
+        .card-img {
+            width: 100%;
+            height: 50%;
+            object-fit: fill;
+        }
+        .card-img img {
+            width: 100%;
+            height: 130%;
+            object-fit: fill;
+            justify-content: center;
+        }
+        .card-name {
+            padding-top: 50px;
+            font-family: Georgia, serif;
+            font-size: 2rem;
+            margin: 10px 0;
+        }
+        .card-role {
+            padding-top: 6%;
+            padding-left: 7%;
+            padding-right: 7%;
+            padding-bottom:  8%;
+            font-size: 16px;
+            color: #2d2adf;
+            margin: 5px 0;
+            font-weight: normal;
+        }
+        .btn3 {
+            background-color: transparent;
+            padding-top: 200%;
+            padding-bottom: 100%;
+            padding-left: 100%;
+            padding-right: 100%;
+        }
+        /* Contact Section Start */
+        .contact{
+            background: linear-gradient(#fff 50%, var(--black) 50.1%);
+        }
+        .contact form{
+            padding: 2rem;
+            background: #fff;
+            box-shadow: 0 .5rem 3rem rgba(0,0,0,.1);
+        }
+        .contact form .inputBox{
+            position: relative;
+        }
+        .contact form .inputBox input, .contact form .inputBox textarea{
+            width: 100%;
+            margin: 1.5rem 0;
+            padding: 1rem;
+            border-bottom: .2rem solid rgba(0,0,0,.3);
+            font-size: 1.7rem;
+            text-transform: none;
+        }
+        .contact form .inputBox textarea{
+            resize: none;
+            height: 15rem;
+        }
+        .contact form .inputBox input:focus,
+        .contact form .inputBox textarea:focus{
+            border-color: var(--red);
+        }
+        .contact form .inputBox label{
+            font-size: 1.7rem;
+            position: absolute;
+            top: 2.3rem;
+            left: 0;
+        }
+        .contact form .inputBox input:focus ~ label,
+        .contact form .inputBox textarea:focus ~ label,
+        .contact form .inputBox input:valid ~ label,
+        .contact form .inputBox textarea:valid ~ label{
+            top: -.4rem;
+            font-size: 1.5rem;
+            color: var(--red);
+        }
+        /* Footer section start */
+        .footer{
+            text-align: center;
+            background: var(--black);
+        }
+        .footer .share a{
+            height: 4.5rem;
+            width: 4.5rem;
+            line-height: 4.5rem;
+            background: #eee;
+            color: var(--black);
+            border-radius: 50%;
+            font-size: 2rem;
+            margin: .3rem;
+        }
+        .footer .share a:hover{
+            color: #fff;
+            background: var(--gradient);
+        }
+        .footer .credit{
+            color: #eee;
+            padding: 1.5rem 1rem;
+            font-weight: normal;
+            font-size: 2rem;
+        }
+        .footer .credit span{
+            color: var(--red);
+        }
+        /* medis queries */
+        @media (max-width:991px){
+            html{
+                font-size: 55%;
+            }
+            header{
+                padding: 2rem 4%;
+            }
+            section{
+                padding: 3rem 4%;
+            }
+        }
+        @media (max-width:768px){
+            #menu-bar{
+                display: block;
+            }
+            header .navbar{
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--black);
+                border-top: .1rem solid #fff3;
+                padding: 1rem 2rem;
+                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            }
+            header .navbar .nav-toggle{
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+            header .navbar a{
+                display: block;
+                margin: 1.5rem 0;
+                padding: 1rem;
+                background: var(--gradient);
+                text-align: center;
+                border-radius: .5rem;
+            }
+            header .navbar a:hover{
+                color: var(--black);
+            }
+            .fa-times{
+                transform: rotate(180deg);
+            }
+            .home .content h3{
+                font-size: 4rem;
+            }
+            .home .content p{
+                font-size: 1.5rem;
+            }
+            .about .row .content{
+                text-align: center;
+            }
+            .about .row .content .buttons a{
+                width: 100%;
+            }
+            .about .row .content .buttons a:last-child{
+                margin: 1rem 0;
+            }
+        }
+        @media (max-width:400px){
+            html{
+                font-size: 50%;
+            }
+            .heading{
+                font-size: 4rem;
+            }
+        }
+    </style>
+    <body>
+    <!----------------------------------------------------Header Section starts-------------------------------------------->
+        <header>
+            <a href="index.html" class="logo">Cyber Learn Safely</a>
+            <div id="menu-bar" class="fas fa-bars"></div>
+            <nav class="navbar">
+                <a href="#home">home</a>
+                <a href="#features">features</a>
+                <a href="#about">about</a>
+                <a href="#course">course</a>
+                <a href="#review">review</a>
+                <a href="#contact">contact</a>
+            </nav>
+        </header>
+    <!----------------------------------------------------Home Section starts-------------------------------------------->
+        <section class="home" id="home">
+            <div class="content">
+                <h3>Cyber Learn Safely</h3>
+                <p>Cyber Learn Safely is a website that helps you to learn cyber security, Coding, Networking & Cryptography.</p>
+                <a href="#course" class="btn">get started</a>
+            </div>
+            <div class="swiper-container imge-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="Web_Ethical Hacking.png" /></div>
+                    <div class="swiper-slide"><img src="https://swiperjs.com/demos/images/nature-2.jpg" /></div>
+                    <div class="swiper-slide"><img src="https://swiperjs.com/demos/images/nature-3.jpg" /></div>
+                    <div class="swiper-slide"><img src="https://swiperjs.com/demos/images/nature-4.jpg" /></div>
+                    <div class="swiper-slide"><img src="https://swiperjs.com/demos/images/nature-5.jpg" /></div>
+                    <div class="swiper-slide"><img src="https://swiperjs.com/demos/images/nature-6.jpg" /></div>
+                    <div class="swiper-slide"><img src="https://swiperjs.com/demos/images/nature-7.jpg" /></div>
+                    <div class="swiper-slide"><img src="https://swiperjs.com/demos/images/nature-8.jpg" /></div>
+                    <div class="swiper-slide"><img src="https://swiperjs.com/demos/images/nature-9.jpg" /></div>
+                    <div class="swiper-slide"><img src="https://swiperjs.com/demos/images/nature-6.jpg" /></div>
+                    <div class="swiper-slide"><img src="https://swiperjs.com/demos/images/nature-7.jpg" /></div>
+                    <div class="swiper-slide"><img src="https://swiperjs.com/demos/images/nature-8.jpg" /></div>
+                    <div class="swiper-slide"><img src="https://swiperjs.com/demos/images/nature-9.jpg" /></div>
+                </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>       
+        </section>
+    <!----------------------------------------------------Featuers Section starts-------------------------------------------->
+        <section class="features" id="features">
+            <h1 class="heading">features</h1>
+            <div class="box-container">
+                <div class="box">
+                    <i class="fas fa-magic"></i>
+                    <h3>Live Classes</h3>
+                    <p>aaaaaa</p>
+                </div>
+                <div class="box">
+                    <i class="fas fa-magic"></i>
+                    <h3>Hands-on experience</h3>
+                    <p>aaaa</p>
+                </div>
+                <div class="box">
+                    <i class="fas fa-magic"></i>
+                    <h3>Internship Opportunities</h3>
+                    <p>aaaa</p>
+                </div>
+                <div class="box">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Placement Support</h3>
+                    <p>aaaa</p>
+                </div>
+                <div class="box">
+                    <i class="fas fa-magic"></i>
+                    <h3>Certificate check</h3>
+                    <p>aaaaaa</p>
+                </div>
+                <div class="box">
+                    <i class="fas fa-headset"></i>
+                    <h3>24 X 7 services</h3>
+                    <p>aaaaaa</p>
+                </div>
+            </div>
+        </section>
+    <!----------------------------------------------------About Section starts-------------------------------------------->
+        <section class="about" id="about">
+            <h1 class="heading">about</h1>
+            <p>Welcome to Cyber Learn Safely, Cyber Learn Safely is a cyber Security service provider and learning platform, founded in 2024 by CEO and Full Stack Developer, Sayan Aich. Our mission is to empower individuals and organizations to stay secure in an increasingly digital world. With a strong focus on education, we offer a wide range of services, from cybersecurity training and workshops to comprehensive security assessments and consulting. Our team of experienced cybersecurity professionals is led by Sayan Aich, who brings a wealth of expertise in full stack development and cybersecurity. With a passion for creating innovative solutions and staying ahead of emerging threats, Sayan ensures that our clients receive the latest knowledge and technology to help them protect their assets and reputation. With a focus on simplicity, functionality, and aesthetics, Srestha ensures that our users have an engaging and enjoyable learning experience. Whether you're a seasoned cybersecurity professional or just starting out, Cyberlearnsafely has something to offer. Join our community of learners and start building your cybersecurity skills today!</p>
+            <div class="row">
+                <div class="img">
+                    <img src="about-1.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>Take a Look Around our App</h3>
+                    <p>your comprehensive resource for learning coding, hacking, and cybersecurity. Explore our extensive tutorials, guides, and resources, and take your skills to the next level. From ethical hacking to network security, we've got you covered.</p>
+                    <div class="buttons">
+                        <a href="#"><img src="google-playstore.JPG" alt=""></a>
+                        <a href="#"><img src="apple-appstore.JPG" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!----------------------------------------------------Why Cyber Learn Safely Section starts-------------------------------------------->
+        <section class="why_cyberlearnsafely" id="why">
+            <h1 class="heading">why Cyber Learn Safely</h1>
+            <div class="why_cyberlearnsafely-cards">
+                <!-- Cards here -->
+                <!-- Card 1 -->
+                <div class="cards">
+                    <div class="cards-img">   
+                        <img src="affordable-price.jpg" alt="Affordable Price">
+                    </div>
+                    <div class="cards-info">   
+                        <h2 class="cards-name">Affordable Price</h2>
+                        <a href="#" class="btn3"></a>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="cards">
+                    <div class="cards-img">
+                        <img src="live-class.jpg" alt="Live Class">
+                    </div>
+                    <div class="cards-info">
+                        <h2 class="cards-name">Live Class</h2>
+                        <a href="#" class="btn3"></a>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="cards">
+                    <div class="cards-img">
+                        <img src="practical-class.jpg" alt="Practical Labs">
+                    </div>
+                    <div class="cards-info">
+                        <h2 class="cards-name">Practical Labs</h2>
+                        <a href="#" class="btn3"></a>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="cards">
+                  <div class="cards-img">
+                      <img src="placement-support.jpg" alt="Placement Support">
+                  </div>
+                  <div class="cards-info">
+                      <h2 class="cards-name">Placement Support</h2>
+                      <a href="#" class="btn3"></a>
+                  </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="cards">
+                    <div class="cards-img">
+                        <img src="internship.png" alt="Internship Opportunities">
+                    </div>
+                    <div class="cards-info">
+                        <h2 class="cards-name">Internship Opportunities</h2>
+                        <a href="#" class="btn3"></a>
+                    </div>
+                  </div>
+              </div>
+        </section>
+    <!----------------------------------------------------Course Section starts-------------------------------------------->
+        <section class="course" id="course">
+            <h1 class="heading">course</h1>
+            <div class="course-cards">
+                <!-- Cards here -->
+                <!-- Card 1 -->
+                <div class="card">
+                    <div class="card-img">   
+                        <img src="C.jpeg" alt="C">
+                    </div>
+                    <div class="card-info">   
+                        <h2 class="card-name">C</h2>
+                        <a href="c.html" class="btn3"></a>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="card">
+                    <div class="card-img">
+                        <img src="C++.png" alt="C++">
+                    </div>
+                    <div class="card-info">
+                        <h2 class="card-name">C++</h2>
+                        <a href="c++.html" class="btn3"></a>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="card">
+                    <div class="card-img">
+                        <img src="JAVA.png" alt="JAVA">
+                    </div>
+                    <div class="card-info">
+                        <h2 class="card-name">JAVA</h2>
+                        <a href="java.html" class="btn3"></a>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="card">
+                    <div class="card-img">
+                        <img src="Python.png" alt="PYTHON">
+                    </div>
+                    <div class="card-info">
+                        <h2 class="card-name">PYTHON</h2>
+                        <a href="python.html" class="btn3"></a>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="card">
+                    <div class="card-img">
+                        <img src="BASH.JPG" alt="BASH SCRIPTING">
+                    </div>
+                    <div class="card-info">
+                        <h2 class="card-name">BASH SCRIPTING</h2>
+                        <a href="bash.html" class="btn3"></a>
+                    </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="card">
+                    <div class="card-img">
+                      <img src="computer-architecture.jpeg" alt="COMPUTER ARCHITECTURE">
+                    </div>
+                    <div class="card-info">
+                      <h2 class="card-name">COMPUTER ARCHITECTURE</h2>
+                      <a href="#" class="btn3"></a>
+                    </div>
+                </div>
+                <!-- Card 7 -->
+                <div class="card">
+                    <div class="card-img">
+                      <img src="dsa.jpeg" alt="DATA STRUCTURES AND ALGORITHMS">
+                    </div>
+                    <div class="card-info">
+                      <h2 class="card-name">DATA STRUCTURES AND ALGORITHMS</h2>
+                      <a href="#" class="btn3"></a>
+                    </div>
+                  </div>
+                <!-- Card 8 -->
+                <div class="card">
+                    <div class="card-img">
+                      <img src="Networking.jpg" alt="ADVANCE NETWORKING">
+                    </div>
+                    <div class="card-info">
+                      <h2 class="card-name">ADVANCE NETWORKING</h2>
+                      <a href="#" class="btn3"></a>
+                    </div>
+                  </div>
+                <!-- Card 9 -->
+                <div class="card">
+                  <div class="card-img">
+                    <img src="cryptography.webp" alt="CRYPTOGRAPHY">
+                  </div>
+                  <div class="card-info">
+                    <h2 class="card-name">CRYPTOGRAPHY</h2>
+                    <a href="#" class="btn3"></a>
+                  </div>
+                </div>
+                <!-- Card 10 -->
+                <div class="card">
+                  <div class="card-img">
+                    <img src="Ethical-hacking.jpg" alt="ETHICAL HACKING">
+                  </div>
+                  <div class="card-info">
+                    <h2 class="card-name">ETHICAL HACKING</h2>
+                    <a href="hacking.html" class="btn3"></a>
+                  </div>
+                </div>
+                <!-- Card 11 -->
+                <div class="card">
+                    <div class="card-img">
+                      <img src="bug-bounty.jpeg" alt="BUG BOUNTY">
+                    </div>
+                    <div class="card-info">
+                      <h2 class="card-name">BUG BOUNTY</h2>
+                      <a href="#" class="btn3"></a>
+                    </div>
+                </div>
+                <!-- Card 12 -->
+                <div class="card">
+                    <div class="card-img">
+                      <img src="cyber-forensics.jpeg" alt="CYBER FORENSIC">
+                    </div>
+                    <div class="card-info">
+                      <h2 class="card-name">CYBER FORENSIC</h2>
+                      <a href="#" class="btn3"></a>
+                    </div>
+                </div>
+                <!-- Card 13 -->
+                <div class="card">
+                    <div class="card-img">
+                      <img src="basic-computer.jpeg" alt="BASIC COMPUTER COURSE">
+                    </div>
+                    <div class="card-info">
+                      <h2 class="card-name">BASIC COMPUTER COURSE</h2>
+                      <a href="#" class="btn3"></a>
+                    </div>
+                </div>
+                <!-- Card 14 -->
+                <div class="card">
+                    <div class="card-img">
+                      <img src="excel.jpeg" alt="BASIC TO ADVANCE EXCEL">
+                    </div>
+                    <div class="card-info">
+                      <h2 class="card-name">BASIC TO ADVANCE EXCEL</h2>
+                      <a href="#" class="btn3"></a>
+                    </div>
+                </div>
+              </div>
+        </section>
+    <!----------------------------------------------------Review Section starts-------------------------------------------->
+
+
+
+    <!----------------------------------------------------Contact Section starts-------------------------------------------->
+        <section class="contact" id="contact">
+            <h1 class="heading">get in touch</h1>
+            <form action="">
+                <div class="inputBox">
+                    <input type="text" required>
+                    <label>name</label>
+                </div>
+                <div class="inputBox">
+                    <input type="number" required>
+                    <label>phone number</label>
+                </div>
+                <div class="inputBox">
+                    <input type="email" required>
+                    <label>email</label>
+                </div>
+                <div class="inputBox">
+                    <textarea required name="" id="" cols="30" rows="10"></textarea>
+                    <label>message</label>
+                </div>
+                <input type="submit" class="btn" value="send message">
+            </form>
+        </section>
+    <!----------------------------------------------------Footer Section starts-------------------------------------------->
+        <section class="footer">
+            <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="https://www.youtube.com/@Cyber_Learn_Safely" class="fab fa-youtube"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+                <a href="https://chat.whatsapp.com/HTxBgUoV1jSApEDLsA1wId " class="fab fa-whatsapp"></a>
+            </div>
+            <h1 class="credit"><span>cyberlearnsafely@gmail.com</span></h1>
+            <h1 class="credit">Copyright 2024 @ <span>Cyber Learn Safely</span> All Rights Reserved!</h1>
+        </section>
+    <!---------------------------------------------------Script Part-------------------------------------------------->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script>
+            var swiper = new Swiper(".imge-slider", {
+                effect: "coverflow",
+                grabCursor: true,
+                centeredSlides: true,
+                slidesPerView: "auto",
+                coverflowEffect: {
+                    rotate: 0,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 2,
+                    slideShadows: true,
+                },
+                loop: true,
+                autoplay: {
+                    display: 2000,
+                    disableOnInteraction: false,
+                },
+            });
+            let menu = document.querySelector('#menu-bar');
+            let navbar = document.querySelector('.navbar');
+            menu.addEventListener('click', () =>{
+                menu.classList.toggle('fa-times');
+                navbar.classList.toggle('nav-toggle');
+            });
+            window.onscroll = () =>{
+                menu.classList.remove('fa-times');
+                navbar.classList.remove('nav-toggle');
+            }
+        </script>
+    </body>
+</html>
